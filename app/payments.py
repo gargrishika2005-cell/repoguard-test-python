@@ -1,1 +1,0 @@
-STRIPE_KEY = "sk_test_riuyiyy3425427_hehqw0_rtquetrwt4689256"
