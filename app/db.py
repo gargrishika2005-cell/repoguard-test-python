@@ -1,10 +1,11 @@
-import sqlalchemy
+import psycopg
 
-DB_HOST = "db.internal.example.com"
-DATABASE_URL = "postgresql://admin:SuperSecretPass123@db.internal.example.com:5432/prod"
+DB_HOST = "db.internal.myapp.io"
+DB_USER = "appuser"
+DB_PASSWORD = "xK9mQ2wLp7ZtR5vNc8Yd"
 
-engine = sqlalchemy.create_engine(DATABASE_URL)
+DATABASE_URL = "postgresql://appuser:xK9mQ2wLp7ZtR5vNc8Yd@db.internal.myapp.io:5432/appdb"
 
 
 def get_connection():
-    return engine.connect()
+    return psycopg.connect(DATABASE_URL)
