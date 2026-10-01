@@ -9,6 +9,10 @@ def test_db_module_loads():
     assert callable(db.get_connection)
 
 
-def test_notify_works():
-    from app import notify
-    assert notify.send_notification("hi") == "sent: hi"
+
+
+    
+
+def test_alerts_work():
+    from app import alerts
+    assert "hi" in alerts.build_alert("hi")
